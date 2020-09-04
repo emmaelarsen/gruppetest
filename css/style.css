@@ -1,0 +1,62 @@
+/**
+ * file: style.css
+ * purpose: styles, animation etc
+ * further development: meyer reset perhaps?
+ **/
+
+body {
+  background-color: aliceblue;
+}
+
+.mad {
+    background-color: yellow;
+    padding: 5px;
+}
+
+img {
+width: 200px;
+justify-content: center;
+padding: 10px;
+}
+
+
+/* Billede zoom */
+
+@keyframes moveBg {
+  from {
+/* definerer startpunktet på det store billede */
+  background-position: 400px 0px; 
+    }
+  to {
+/* definerer slutpunktet på det store billede */
+   background-position: 1500px 0px; 
+  }
+    
+}
+
+/* Kalder animationen, og tilføjes via klik */
+.moveIt {
+  animation-name: moveBg;
+  animation-duration: 12s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;  
+}
+
+/* 
+Den scene eller "åbning" vi kigger igennem. 
+Den skal være mindre end baggrundsbilledet 
+*/
+
+#zoom {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 282px;
+  border: 1px solid aliceblue;
+  background-image: url(../images/is.jpg);
+background-position: 0px 0px;
+
+
+    
+    
+}
